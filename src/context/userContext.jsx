@@ -7,7 +7,7 @@ function userProvider({children}) {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
 
-    const fetchUser = async() => {
+    const fetchUser = async(text) => {
         try {
             setLoading(true)
             const response = await fetch(url + text)

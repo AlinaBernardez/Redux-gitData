@@ -29,14 +29,12 @@ function App() {
     }
   }
 
-
-
   return (
   <>
-  <input type='text' placeholder='Busca por nombre de usuario' value={text} onChange={ e => setText(e.target.value)} />
-  <button onClick={() => fetchUser(text)}>Buscar</button>
-  {user ? <Card user={user}/> : (<p>Introduce un nombre</p>)}
-  {errorMessage && <p>{errorMessage}</p>}
+    <input type='text' placeholder='Busca por nombre de usuario' value={text} onChange={ e => setText(e.target.value)} />
+    <button onClick={() => fetchUser(text)}>Buscar</button>
+    {user ? <Card user={user}/> : (<p>Introduce un nombre</p>)}
+    {errorMessage && <p>{errorMessage}</p>}
   </>
   );
 }
